@@ -8,11 +8,11 @@ class Solution:
     # @param head, a ListNode
     # @return a boolean
     def hasCycle(self, head):
-        aDict, found, curr = {}, False, head
+        aDict, curr = {}, head
         while curr:
             if curr in aDict:
                 return True
             else:
                 aDict[curr] = 0
                 curr = curr.next
-        return found
+        return False
